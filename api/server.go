@@ -13,7 +13,7 @@ type Server struct {
 
 
 // NewServer creates a new HTTP server and setup routing
-func NewStore(store db.Store) *Server {
+func NewServer(store db.Store) *Server {
 
     server := &Server{store: store}
     router := gin.Default()
