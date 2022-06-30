@@ -4,14 +4,16 @@ import (
     "github.com/gin-gonic/gin"
     db "github.com/JohannSuarez/GoBackend/db/sqlc"
 )
-// Server serves HTTP requests for our banking service
+
+// SQLStore provides all functions to execute SQL queries and transactions
 type Server struct {
-    store *db.Store
+    store db.Store
     router *gin.Engine
 }
 
+
 // NewServer creates a new HTTP server and setup routing
-func NewServer(store *db.Store) *Server {
+func NewStore(store db.Store) *Server {
 
     server := &Server{store: store}
     router := gin.Default()
