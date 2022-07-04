@@ -1,5 +1,5 @@
 postgres:
-	docker run --name postgres-instance -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=esth3r -d postgres
+	docker run --name postgres-instance --network gobackend-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=esth3r -d postgres
 
 createdb:
 	docker exec -it postgres-instance createdb --username=root --owner=root simple_bank
