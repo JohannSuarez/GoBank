@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Check out code
-      runs-on: ubuntu-latest
+      uses: actions/checkout@v2
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
