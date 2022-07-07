@@ -14,8 +14,8 @@ jobs:
 
     - name: Install kubectl
     - uses: azure/setup-kubectl@v2.0
-        with:
-          version: 'v1.24.2' # default is latest stable
+      with:
+        version: 'v1.24.2' # default is latest stable
       id: install
 
     - name: Check out code
