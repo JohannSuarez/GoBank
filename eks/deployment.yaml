@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: simple-bank-api
-        image: 196580110954.dkr.ecr.us-west-2.amazonaws.com/gobackend:24b2af866b1545b810ac1122fe5b8536c67c5fd2
+        image: 196580110954.dkr.ecr.us-west-2.amazonaws.com/gobackend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
